@@ -1,4 +1,6 @@
 # AutoGen Test Project
 ### Created by Sam Gentry
 
-Need Docker Running before executing application
+To run application, create .env file with API_KEY
+Need Docker Desktop Running before executing application
+
