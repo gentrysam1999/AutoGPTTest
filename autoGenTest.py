@@ -8,7 +8,7 @@ print(environ.get('API_KEY'))
 
 config_list = [
     {
-        'model': 'gpt-4',
+        'model': 'gpt-3.5-turbo',
         'api_key': environ.get('API_KEY')
     }
 ]
@@ -33,7 +33,7 @@ user_proxy = autogen.UserProxyAgent(
     is_termination_msg=lambda x: x.get("content", "").rstrip().endswith("TERMINATE"),
     code_execution_config={"work_dir": "web"},
     llm_config=llm_config,
-    system_message="""Reply TERMINATE if the task has been solved at full satisfaction.
+    system_message="""Always do the following: Reply TERMINATE if the task has been solved at full satisfaction.
 Otherwise, reply CONTINUE, or the reason why the task is not solved yet."""
 )
 
